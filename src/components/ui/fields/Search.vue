@@ -46,5 +46,10 @@ export default {
       color: rgba(255, 255, 255, 0.5);
     }
   }
+  @media screen and (max-width:480px) {
+      left: 0; 
+      right: 0; 
+      top: 60px;
+  }
 }
 </style>
