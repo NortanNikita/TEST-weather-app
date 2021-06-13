@@ -2,7 +2,7 @@
 <div class="not-found-page page flex-column">
     <h1>404</h1>
     <p>Page not found</p>
-    <router-link to='/'>back to weather app</router-link>
+    <router-link to='/'>Back to weather app</router-link>
 </div>    
 </template>
 <style lang="scss" scoped>
