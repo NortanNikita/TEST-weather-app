@@ -14,8 +14,12 @@ const routes = [
     path: "/week",
     name: "Week",
     component: () =>
-      import(/* webpackChunkName: "week" */ "../views/Week.vue"),
+      import("../views/Week.vue"),
   },
+  { 
+    path: '*', 
+    component: () => import("../views/NotFound.vue")
+  }
 ];
 
 const router = new VueRouter({

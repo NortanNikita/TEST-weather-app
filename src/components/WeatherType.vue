@@ -1,13 +1,16 @@
 <template>
     <div class="weather-type">
-       <span>{{type}}</span>
+       <span>{{weatherType}}</span>
     </div>
 </template>
 <script>
 export default {
-    data:()=>({
-        type:'Clouds'
-    })
+   props:{
+       weatherType: {
+           type: String,
+           default:''
+       }
+   }
 }
 </script>
 <style lang="scss" scoped>

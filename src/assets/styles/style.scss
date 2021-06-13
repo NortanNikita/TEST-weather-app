@@ -12,28 +12,75 @@ html {
 }
 :root {
     --font: Roboto, sans-serif;
-    --textColor: #374961;
-    --linkActiveColor: #41b783;
-  }
+    --textColor: #fff;
+    --linkActiveColor: #fca100;
+    --fontSize: 16px;
+}
 
 #app {
   font-family: var(--font);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: var(--textColor);
+  // -webkit-font-smoothing: antialiased;
+  // -moz-osx-font-smoothing: grayscale;
 }
 
-.nav {
-  padding: 30px 0 100px 0;
-
+@mixin nav-links {
   a {
     font-weight: 500;
     color: var(--textColor);
     margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
   }
-
   a.router-link-exact-active {
     color: var(--linkActiveColor);
   }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: absolute;
+  top:0;left: 0;
+  padding:20px;
+  @include nav-links;
+}
+.page {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 100px 10px;
+  @include flex-center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.d-flex {
+  display: flex;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.text-center {
+  text-align: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+// animations for router
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.75s ease;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }
